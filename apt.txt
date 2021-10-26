@@ -1,0 +1,7 @@
+build-essential
+gcc-8
+g++-8
+vim
+emacs
+mpi-default-dev
+openmpi-bin

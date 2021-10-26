@@ -1,0 +1,2 @@
+cd /tmp && wget -q --no-check-certificate https://github.com/Kitware/CMake/releases/download/v3.22.0-rc1/cmake-3.22.0-rc1-linux-x86_64.tar.gz && tar xf cmake-3.22.0-rc1-linux-x86_64.tar.gz && rm -f cmake-3.22.0-rc1-linux-x86_64.tar.gz
+mv /tmp/cmake-3.22.0-rc1-linux-x86_64 /tmp/cmake
