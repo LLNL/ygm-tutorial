@@ -1,0 +1,1 @@
+add_tutorial_executable(solution1)

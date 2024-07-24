@@ -1,0 +1,3 @@
+add_tutorial_executable(red_sandbox)
+add_tutorial_executable(blue_sandbox)
+add_tutorial_executable(green_sandbox)
