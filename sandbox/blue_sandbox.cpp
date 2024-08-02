@@ -5,6 +5,7 @@
 
 #include <ygm/comm.hpp>
 #include <ygm/container/map.hpp>
+#include <ygm/container/set.hpp>
 
 int main(int argc, char** argv) {
   ygm::comm world(&argc, &argv);
@@ -26,10 +27,10 @@ int main(int argc, char** argv) {
     world.barrier();
 
     // Print names and favorite colors in a for_all
-    favorite_colors.for_all(/* Your lambda here */);
+    //favorite_colors.for_all(/* Your lambda here */);
 
     // Print names of people whose favorite color is "Green"
-    favorite_colors.for_all(/* Your lambda here */);
+    //favorite_colors.for_all(/* Your lambda here */);
 
     // Create a set of names we are interested in
     ygm::container::set<std::string> characters_of_interest(world);
@@ -39,10 +40,10 @@ int main(int argc, char** argv) {
         "Max");  // Not in map of favorite colors
 
     // Print favorite colors of names in set using async_visit
-    characters_of_interest.for_all([&favorite_colors](const std::string& name) {
-      favorite_colors.async_visit(
-          name, /* Write lambda to print favorite color here */);
-    });
+    // characters_of_interest.for_all([&favorite_colors](const std::string& name) {
+    //   favorite_colors.async_visit(
+    //       name, /* Write lambda to print favorite color here */);
+    // });
 
     // Re-run your for_all on favorite_colors to print all favorite colors. What
     // happened since you first printed?
