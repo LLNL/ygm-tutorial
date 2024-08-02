@@ -1,1 +1,1 @@
-add_tutorial_executable(solution1)
+add_subdirectory(introduction)

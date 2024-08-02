@@ -6,7 +6,7 @@
 
 | Name                            | Description                  | 
 | ---------                       | -----------             |
-| [Excersise 1](./exercise1.cpp)  |                         | 
-| [Excersise 2](./exercise2.cpp)  |                         | 
+<!--| [Excersise 1](./exercise1.cpp)  |                         | 
+| [Excersise 2](./exercise2.cpp)  |                         | -->
 
 

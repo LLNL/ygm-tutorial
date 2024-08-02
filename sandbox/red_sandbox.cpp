@@ -39,13 +39,13 @@ int main(int argc, char** argv) {
 
   //
   // Count the number of even numbers using filter, map & reduce
-  {
-    ygm::comm                world(&argc, &argv);
-    ygm::container::bag<int> ibag(world, {3, 1, 4, 1, 5});
-    ibag.filter([](int i) { return i % 2 == 0; })
-        .map([](int i) { return size_t(1); })
-        .reduce(std::plus<size_t>());
-  }
+  // {
+  //   ygm::comm                world(&argc, &argv);
+  //   ygm::container::bag<int> ibag(world, {3, 1, 4, 1, 5});
+  //   ibag.filter([](int i) { return i % 2 == 0; })
+  //       .map([](int i) { return size_t(1); })
+  //       .reduce(std::plus<size_t>());
+  // }
 
 
 

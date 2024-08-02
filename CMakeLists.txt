@@ -33,17 +33,17 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Boost)
 get_boost_include_dirs()
 
-#
-#  cereal
-find_package(cereal QUIET)
-if (NOT cereal_FOUND)
-    set(JUST_INSTALL_CEREAL TRUE)
-    FetchContent_Declare(cereal
-            GIT_REPOSITORY https://github.com/USCiLab/cereal.git
-            GIT_TAG master
-            )
-    FetchContent_MakeAvailable(cereal)
-endif ()
+# #
+# #  cereal
+# find_package(cereal QUIET)
+# if (NOT cereal_FOUND)
+#     set(JUST_INSTALL_CEREAL TRUE)
+#     FetchContent_Declare(cereal
+#             GIT_REPOSITORY https://github.com/USCiLab/cereal.git
+#             GIT_TAG master
+#             )
+#     FetchContent_MakeAvailable(cereal)
+# endif ()
 
 
 #
@@ -57,20 +57,12 @@ if (MPI_CXX_FOUND)
     if (NOT YGM_FOUND)
         set(JUST_INSTALL_YGM TRUE)
         FetchContent_Declare(YGM
-            GIT_REPOSITORY https://github.com/rogerpearce/ygm.git
-            GIT_TAG feature/containers
+            GIT_REPOSITORY https://github.com/llnl/ygm.git
+            GIT_TAG v0.7-dev
                 )
         FetchContent_MakeAvailable(YGM)
     endif ()
 endif ()
-
-
-
-# #
-# #  CXX Filesystem library
-# #
-# include(include_cxx_filesystem_library)
-# include_cxx_filesystem_library()
 
 
 #
