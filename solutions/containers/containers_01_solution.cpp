@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
   {
     ygm::container::counting_set<std::string> cset(world, mybag);
 
-    std::map<std::string, size_t> kg = cset.key_gather({"green"});
+    std::map<std::string, size_t> kg = cset.gather_keys({"green"});
     world.cout0("Number of greens: ", kg["green"]);
   }
 
