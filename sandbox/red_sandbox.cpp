@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
   // Modify the following code to print out the async sender
   {
     ygm::comm world(&argc, &argv);
-    ASSERT_RELEASE(world.size() > 1);
+    YGM_ASSERT_RELEASE(world.size() > 1);
 
     auto my_first_async = []() {
       std::cout << "Received async from " << /*finish me <<*/ std::endl;
