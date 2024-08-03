@@ -1,1 +1,3 @@
 add_tutorial_executable(containers_01_solution)
+add_tutorial_executable(containers_02_solution)
+add_tutorial_executable(containers_03_solution)
