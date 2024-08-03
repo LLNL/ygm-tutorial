@@ -35,10 +35,20 @@ int main(int argc, char** argv) {
     ygm::container::counting_set<std::string> cset(world, mybag);
 
     std::map<std::string, size_t> kg = cset.gather_keys({"green"});
-    world.cout0("Number of greens: ", kg["green"]);
+    world.cout0("Number of green: ", kg["green"]);
   }
 
-  /////////////////////////////////////////////////////////////
-  // Step 3: Find the most frequently occuring string        //
-  /////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////
+  // Step 3: Find the most frequently occurring string        //
+  //////////////////////////////////////////////////////////////
+
+  {
+    ygm::container::counting_set<std::string> cset(world, mybag);
+
+    std::vector<std::pair<std::string, size_t>> kg = cset.gather_topk(
+        1, [](auto p1, auto p2) { return p1.second > p2.second; });
+
+    world.cout0("Most frequently occurring string: ", kg[0].first,
+                " count = ", kg[0].second);
+  }
 }
