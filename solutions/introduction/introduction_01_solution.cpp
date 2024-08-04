@@ -39,4 +39,19 @@ int main(int argc, char** argv) {
   ///////////////////////////////////////////////////////////// //
   // Note the difference between world.cout() and world.cout0() //
   ///////////////////////////////////////////////////////////// //
+
+  world.barrier();
+  /////////////////////////////////////////////////////
+  // Step 3: Ask your neighbor to print their rank.  //
+  /////////////////////////////////////////////////////
+
+  int next_rank = (world.rank() + 1) % world.size(); 
+
+  auto printer = [](auto pcomm, int sender){
+    pcomm->cout(sender, " asked me to print.");
+  };
+  
+  world.async(next_rank, printer, world.rank());
+
+  
 }
