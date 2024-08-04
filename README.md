@@ -13,12 +13,6 @@ After Binder is launched, open **Terminal**.
 Then,
 
 ```
-# Setup environmental variables
-source setup.sh
-
-# Get YGM and build
-git clone https://github.com/LLNL/ygm.git
-cd ygm
 mkdir build
 cd build
 cmake ../
@@ -26,7 +20,7 @@ make
 
 # OpenMPI is available on the system.
 # To launch an example program, for example:
-mpirun -np 4 ./examples/howdy_world
+mpirun -np 4 ./exercises/introduction/introduction_01
 ```
 
 ## NOTICE and Release
