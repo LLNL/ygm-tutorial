@@ -121,3 +121,7 @@ add_subdirectory(solutions)
 add_subdirectory(exercises)
 add_subdirectory(sandbox)
 
+#
+# Copy the testing data directory
+#
+file(COPY data DESTINATION ${CMAKE_CURRENT_BINARY_DIR})

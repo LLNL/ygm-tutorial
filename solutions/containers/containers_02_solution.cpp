@@ -32,6 +32,8 @@ int main(int argc, char** argv) {
   };
   myset.for_all(set_printer);
 
-  // Note how the output from all the ranks gets interleaved in nondeterministic
-  // order.   Compare with multiple runs.
+  ////////////////////////////////////////////////////////////////////////////////
+  // Note how the output from all the ranks gets interleaved in                 //
+  // nondeterministic order.   Compare with multiple runs.                      //
+  ////////////////////////////////////////////////////////////////////////////////
 }
