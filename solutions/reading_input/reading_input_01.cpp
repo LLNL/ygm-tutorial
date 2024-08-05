@@ -4,7 +4,8 @@
 int main(int argc, char** argv) {
   ygm::comm world(&argc, &argv);
 
-  ygm::io::line_parser lp(world, {"data/loremipsum.txt"});
+  std::vector<std::string> filenames = {"data/loremipsum.txt"};
+  ygm::io::line_parser lp(world, filenames);
 
   /////////////////////////////////////////////////////////////
   // Step 1: Print all the lines in the input file.          //
