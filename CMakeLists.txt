@@ -120,6 +120,7 @@ endfunction()
 add_subdirectory(solutions)
 add_subdirectory(exercises)
 add_subdirectory(sandbox)
+add_subdirectory(examples)
 
 #
 # Copy the testing data directory
