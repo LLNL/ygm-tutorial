@@ -58,7 +58,7 @@ if (MPI_CXX_FOUND)
         set(JUST_INSTALL_YGM TRUE)
         FetchContent_Declare(YGM
             GIT_REPOSITORY https://github.com/llnl/ygm.git
-            GIT_TAG v0.7-dev
+            GIT_TAG v0.8-dev
                 )
         FetchContent_MakeAvailable(YGM)
     endif ()
