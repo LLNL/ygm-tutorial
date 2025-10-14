@@ -8,6 +8,5 @@
 int main(int argc, char** argv) {
   ygm::comm world(&argc, &argv);
 
-  world.cout("Howdy from ", world.rank());
-  return 0;
+  world.welcome();
 }
