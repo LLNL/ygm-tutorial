@@ -1,1 +1,2 @@
 add_tutorial_executable(introduction_01)
+add_tutorial_executable(introduction_02)

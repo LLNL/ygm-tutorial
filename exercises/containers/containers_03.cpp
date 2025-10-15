@@ -22,7 +22,5 @@ int main(int argc, char** argv) {
   // Step 1: Add up all the even numbers in mybag. //
   ///////////////////////////////////////////////////
 
-  int even_sum = mybag.filter([](int i){return i%2==0;}).reduce(std::plus<int>());
 
-  world.cout0("Sum of even numbers = ", even_sum);
 }

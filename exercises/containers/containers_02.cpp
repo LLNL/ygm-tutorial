@@ -21,15 +21,6 @@ int main(int argc, char** argv) {
   // Step 1: Print and compare the partitioning of elements between bag & set //
   //////////////////////////////////////////////////////////////////////////////
 
-  auto bag_printer = [&world](const std::string& s) {
-    world.cout(s, " in bag");
-  };
-  mybag.for_all(bag_printer);
-
-  auto set_printer = [&world](const std::string& s) {
-    world.cout(s, " in set");
-  };
-  myset.for_all(set_printer);
 
   ////////////////////////////////////////////////////////////////////////////////
   // Note how the output from all the ranks gets interleaved in                 //

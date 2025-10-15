@@ -21,6 +21,14 @@ FetchContent_Declare(YGM
         )
 FetchContent_MakeAvailable(YGM)
 
+#
+# Faker
+FetchContent_Declare(faker
+    GIT_REPOSITORY https://github.com/cieslarmichal/faker-cxx
+    GIT_TAG v4.0.1
+        )
+FetchContent_MakeAvailable(faker)
+
 
 #
 #  Common functions for all MetallData Executables
@@ -62,7 +70,7 @@ function(add_tutorial_executable name)
     add_executable(${name} ${name}.cpp)
     add_common_compile_options(${name})
     target_include_directories(${name} PRIVATE ${PROJECT_SOURCE_DIR}/include ${BOOST_INCLUDE_DIRS})
-    target_link_libraries(${name} PRIVATE Boost::json)
+    target_link_libraries(${name} PRIVATE Boost::json faker-cxx)
     setup_ygm_target(${name})
 endfunction()
 
