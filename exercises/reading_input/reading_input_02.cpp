@@ -10,4 +10,10 @@ int main(int argc, char** argv) {
   const auto&             schema = parquetp.get_schema();
 
   world.cout0(schema[0].name, "\t", schema[1].name, "\t", schema[2].name);
+  parquetp.for_all([](auto&& record) {
+
+    ygm::wcout( std::get<std::string>(record[0]), "\t",
+                 std::get<std::string>(record[1]), "\t",
+                 std::get<std::string>(record[2]));
+  });
 }
