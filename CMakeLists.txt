@@ -70,7 +70,7 @@ function(add_tutorial_executable name)
     add_executable(${name} ${name}.cpp)
     add_common_compile_options(${name})
     target_include_directories(${name} PRIVATE ${PROJECT_SOURCE_DIR}/include ${BOOST_INCLUDE_DIRS})
-    target_link_libraries(${name} PRIVATE Boost::json faker-cxx)
+    target_link_libraries(${name} PRIVATE Boost::json faker-cxx Parquet::parquet_shared Arrow::arrow_shared)
     setup_ygm_target(${name})
 endfunction()
 

@@ -1,3 +1,2 @@
 add_subdirectory(introduction)
 add_subdirectory(containers)
-add_subdirectory(reading_input)

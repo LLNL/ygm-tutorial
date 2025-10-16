@@ -1,1 +1,0 @@
-add_tutorial_executable(reading_input_01)
